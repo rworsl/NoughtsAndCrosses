@@ -13,3 +13,18 @@ C:\Users\Freya\source\repos\N and C\N and C\obj\Debug\netcoreapp3.1\N and C.cspr
 C:\Users\Freya\source\repos\N and C\N and C\obj\Debug\netcoreapp3.1\N and C.dll
 C:\Users\Freya\source\repos\N and C\N and C\obj\Debug\netcoreapp3.1\N and C.pdb
 C:\Users\Freya\source\repos\N and C\N and C\obj\Debug\netcoreapp3.1\N and C.genruntimeconfig.cache
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\bin\Debug\netcoreapp3.1\N and C.exe
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\bin\Debug\netcoreapp3.1\N and C.deps.json
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\bin\Debug\netcoreapp3.1\N and C.runtimeconfig.json
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\bin\Debug\netcoreapp3.1\N and C.runtimeconfig.dev.json
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\bin\Debug\netcoreapp3.1\N and C.dll
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\bin\Debug\netcoreapp3.1\N and C.pdb
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.csprojAssemblyReference.cache
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N_and_C.Form1.resources
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.csproj.GenerateResource.cache
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.AssemblyInfoInputs.cache
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.AssemblyInfo.cs
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.csproj.CoreCompileInputs.cache
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.dll
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.pdb
+C:\Users\Freya\source\repos\N and C\NoughtsAndCrosses\N and C\obj\Debug\netcoreapp3.1\N and C.genruntimeconfig.cache

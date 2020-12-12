@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Freya\\source\\repos\\N and C\\N and C\\N and C.csproj",
+      "projectUniqueName": "C:\\Users\\Freya\\source\\repos\\N and C\\NoughtsAndCrosses\\N and C\\N and C.csproj",
       "projectName": "N and C",
-      "projectPath": "C:\\Users\\Freya\\source\\repos\\N and C\\N and C\\N and C.csproj",
+      "projectPath": "C:\\Users\\Freya\\source\\repos\\N and C\\NoughtsAndCrosses\\N and C\\N and C.csproj",
       "packagesPath": "C:\\Users\\Freya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Freya\\source\\repos\\N and C\\N and C\\obj\\",
+      "outputPath": "C:\\Users\\Freya\\source\\repos\\N and C\\NoughtsAndCrosses\\N and C\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Freya\\AppData\\Roaming\\NuGet\\NuGet.Config",
