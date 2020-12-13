@@ -12,6 +12,28 @@ namespace N_and_C
 {
     public partial class Form1 : Form
     {
+        public void resetGame()
+        {
+            buttonOne = 0;
+            buttonTwo = 0;
+            buttonThree = 0;
+            buttonFour = 0;
+            buttonFive = 0;
+            buttonSix = 0;
+            buttonSeven = 0;
+            buttonEight = 0;
+            buttonNine = 0;
+            addPressedButton();
+            button1.Text = "";
+            button2.Text = "";
+            button3.Text = "";
+            button4.Text = "";
+            button5.Text = "";
+            button6.Text = "";
+            button7.Text = "";
+            button8.Text = "";
+            button9.Text = "";
+        }
         public Form1()
         {
             SetWinningRows();
@@ -76,67 +98,67 @@ namespace N_and_C
         
         private string checkWin()
         {
-            if ((winningRow1[0] == 1) && (winningRow1[1] == 1) && (winningRow1[1] == 1))
+            if ((winningRow1[0].Equals(1)) && (winningRow1[1].Equals(1)) && (winningRow1[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow2[0] == 1) && (winningRow2[1] == 1) && (winningRow2[1] == 1))
+            else if ((winningRow2[0].Equals(1)) && (winningRow2[1].Equals(1)) && (winningRow2[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow3[0] == 1) && (winningRow3[1] == 1) && (winningRow3[1] == 1))
+            else if ((winningRow3[0].Equals(1)) && (winningRow3[1].Equals(1)) && (winningRow3[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow4[0] == 1) && (winningRow4[1] == 1) && (winningRow4[1] == 1))
+            else if ((winningRow4[0].Equals(1)) && (winningRow4[1].Equals(1)) && (winningRow4[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow5[0] == 1) && (winningRow5[1] == 1) && (winningRow5[1] == 1))
+            else if ((winningRow5[0].Equals(1)) && (winningRow5[1].Equals(1)) && (winningRow5[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow6[0] == 1) && (winningRow6[1] == 1) && (winningRow6[1] == 1))
+            else if ((winningRow6[0].Equals(1)) && (winningRow6[1].Equals(1)) && (winningRow6[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow7[0] == 1) && (winningRow7[1] == 1) && (winningRow7[1] == 1))
+            else if ((winningRow7[0].Equals(1)) && (winningRow7[1].Equals(1)) && (winningRow7[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow8[0] == 1) && (winningRow8[1] == 1) && (winningRow8[1] == 1))
+            else if ((winningRow8[0].Equals(1)) && (winningRow8[1].Equals(1)) && (winningRow8[2].Equals(1)))
             {
                 return "Player 1 Wins";
             }
-            if ((winningRow1[0] == 2) && (winningRow1[1] == 2) && (winningRow1[1] == 2))
+            else if ((winningRow1[0].Equals(2)) && (winningRow1[1].Equals(2)) && (winningRow1[2].Equals(2)))
+                {
+                return "Computer Wins";
+            }
+            else if ((winningRow2[0].Equals(2)) && (winningRow2[1].Equals(2)) && (winningRow2[2].Equals(2)))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow2[0] == 2) && (winningRow2[1] == 2) && (winningRow2[1] == 2))
+            else if ((winningRow3[0].Equals(2)) && (winningRow3[1].Equals(2)) && (winningRow3[2].Equals(2)))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow3[0] == 2) && (winningRow3[1] == 2) && (winningRow3[1] == 2))
+            else if ((winningRow4[0].Equals(2)) && (winningRow4[1].Equals(2)) && (winningRow4[2].Equals(2)))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow4[0] == 2) && (winningRow4[1] == 2) && (winningRow4[1] == 2))
+            else if ((winningRow5[0].Equals(2)) && (winningRow5[1].Equals(2)) && (winningRow5[2].Equals(2)))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow5[0] == 2) && (winningRow5[1] == 2) && (winningRow5[1] == 2))
+            else if ((winningRow6[0].Equals(2)) && (winningRow6[1].Equals(2)) && (winningRow6[2].Equals(2)))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow6[0] == 2) && (winningRow6[1] == 2) && (winningRow6[1] == 2))
+            else if ((winningRow7[0].Equals(2)) && (winningRow7[1].Equals(2)) && (winningRow7[2].Equals(2)))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow7[0] == 2) && (winningRow7[1] == 2) && (winningRow7[1] == 2))
-            {
-                return "Computer Wins";
-            }
-            else if ((winningRow8[0] == 2) && (winningRow8[1] == 2) && (winningRow8[1] == 2))
+            else if ((winningRow8[0].Equals(2)) && (winningRow8[1].Equals(2)) && (winningRow8[2].Equals(2)))
             {
                 return "Computer Wins";
             }
@@ -235,6 +257,11 @@ namespace N_and_C
             button9.Text = "X";
             buttonNine = 1;
             addPressedButton();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            resetGame();
         }
     }
 }
