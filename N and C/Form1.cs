@@ -12,28 +12,6 @@ namespace N_and_C
 {
     public partial class Form1 : Form
     {
-        public void resetGame()
-        {
-            buttonOne = 0;
-            buttonTwo = 0;
-            buttonThree = 0;
-            buttonFour = 0;
-            buttonFive = 0;
-            buttonSix = 0;
-            buttonSeven = 0;
-            buttonEight = 0;
-            buttonNine = 0;
-            addPressedButton();
-            button1.Text = "";
-            button2.Text = "";
-            button3.Text = "";
-            button4.Text = "";
-            button5.Text = "";
-            button6.Text = "";
-            button7.Text = "";
-            button8.Text = "";
-            button9.Text = "";
-        }
         public Form1()
         {
             SetWinningRows();
@@ -49,6 +27,9 @@ namespace N_and_C
         int buttonSeven = 0;
         int buttonEight = 0;
         int buttonNine = 0;
+
+        int[] availableMoves = new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int[] availableMovesSpare = new int[9] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 
         int[] winningRow1 = new int[3];
@@ -93,72 +74,84 @@ namespace N_and_C
             resetLists();
             SetWinningRows();
             string result = checkWin();
-            textBox1.Text = result;
+            if (result == "undefined")
+            {
+                textBox1.Text = "";
+            }
+            else
+            {
+                textBox1.Text = result;
+            }
         }
-        
+
+        private void removeFromAvailable(int num)
+        {
+            availableMoves = availableMoves.Where(val => val != num).ToArray();
+        }
+
         private string checkWin()
         {
-            if ((winningRow1[0].Equals(1)) && (winningRow1[1].Equals(1)) && (winningRow1[2].Equals(1)))
+            if ((winningRow1[0] == 1) && (winningRow1[1] == 1) && (winningRow1[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow2[0].Equals(1)) && (winningRow2[1].Equals(1)) && (winningRow2[2].Equals(1)))
+            else if ((winningRow2[0] == 1) && (winningRow2[1] == 1) && (winningRow2[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow3[0].Equals(1)) && (winningRow3[1].Equals(1)) && (winningRow3[2].Equals(1)))
+            else if ((winningRow3[0] == 1) && (winningRow3[1] == 1) && (winningRow3[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow4[0].Equals(1)) && (winningRow4[1].Equals(1)) && (winningRow4[2].Equals(1)))
+            else if ((winningRow4[0] == 1) && (winningRow4[1] == 1) && (winningRow4[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow5[0].Equals(1)) && (winningRow5[1].Equals(1)) && (winningRow5[2].Equals(1)))
+            else if ((winningRow5[0] == 1) && (winningRow5[1] == 1) && (winningRow5[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow6[0].Equals(1)) && (winningRow6[1].Equals(1)) && (winningRow6[2].Equals(1)))
+            else if ((winningRow6[0] == 1) && (winningRow6[1] == 1) && (winningRow6[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow7[0].Equals(1)) && (winningRow7[1].Equals(1)) && (winningRow7[2].Equals(1)))
+            else if ((winningRow7[0] == 1) && (winningRow7[1] == 1) && (winningRow7[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow8[0].Equals(1)) && (winningRow8[1].Equals(1)) && (winningRow8[2].Equals(1)))
+            else if ((winningRow8[0] == 1) && (winningRow8[1] == 1) && (winningRow8[2] == 1))
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow1[0].Equals(2)) && (winningRow1[1].Equals(2)) && (winningRow1[2].Equals(2)))
-                {
-                return "Computer Wins";
-            }
-            else if ((winningRow2[0].Equals(2)) && (winningRow2[1].Equals(2)) && (winningRow2[2].Equals(2)))
+            else if ((winningRow1[0] == 2) && (winningRow1[1] == 2) && (winningRow1[1] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow3[0].Equals(2)) && (winningRow3[1].Equals(2)) && (winningRow3[2].Equals(2)))
+            else if ((winningRow2[0] == 2) && (winningRow2[1] == 2) && (winningRow2[1] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow4[0].Equals(2)) && (winningRow4[1].Equals(2)) && (winningRow4[2].Equals(2)))
+            else if ((winningRow3[0] == 2) && (winningRow3[1] == 2) && (winningRow3[1] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow5[0].Equals(2)) && (winningRow5[1].Equals(2)) && (winningRow5[2].Equals(2)))
+            else if ((winningRow4[0] == 2) && (winningRow4[1] == 2) && (winningRow4[1] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow6[0].Equals(2)) && (winningRow6[1].Equals(2)) && (winningRow6[2].Equals(2)))
+            else if ((winningRow5[0] == 2) && (winningRow5[1] == 2) && (winningRow5[1] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow7[0].Equals(2)) && (winningRow7[1].Equals(2)) && (winningRow7[2].Equals(2)))
+            else if ((winningRow6[0] == 2) && (winningRow6[1] == 2) && (winningRow6[1] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow8[0].Equals(2)) && (winningRow8[1].Equals(2)) && (winningRow8[2].Equals(2)))
+            else if ((winningRow7[0] == 2) && (winningRow7[1] == 2) && (winningRow7[1] == 2))
+            {
+                return "Computer Wins";
+            }
+            else if ((winningRow8[0] == 2) && (winningRow8[1] == 2) && (winningRow8[1] == 2))
             {
                 return "Computer Wins";
             }
@@ -201,6 +194,8 @@ namespace N_and_C
             button1.Text = "X";
             buttonOne = 1;
             addPressedButton();
+            removeFromAvailable(1);
+            button1.Enabled = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -208,6 +203,8 @@ namespace N_and_C
             button2.Text = "X";
             buttonTwo = 1;
             addPressedButton();
+            removeFromAvailable(2);
+            button2.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -215,6 +212,8 @@ namespace N_and_C
             button3.Text = "X";
             buttonThree = 1;
             addPressedButton();
+            removeFromAvailable(3);
+            button3.Enabled = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -222,6 +221,8 @@ namespace N_and_C
             button4.Text = "X";
             buttonFour = 1;
             addPressedButton();
+            removeFromAvailable(4);
+            button4.Enabled = false;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -229,6 +230,8 @@ namespace N_and_C
             button5.Text = "X";
             buttonFive = 1;
             addPressedButton();
+            removeFromAvailable(5);
+            button5.Enabled = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -236,6 +239,8 @@ namespace N_and_C
             button6.Text = "X";
             buttonSix = 1;
             addPressedButton();
+            removeFromAvailable(6);
+            button6.Enabled = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -243,6 +248,9 @@ namespace N_and_C
             button7.Text = "X";
             buttonSeven = 1;
             addPressedButton();
+            removeFromAvailable(7);
+            button7.Enabled = false;
+            
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -250,6 +258,8 @@ namespace N_and_C
             button8.Text = "X";
             buttonEight = 1;
             addPressedButton();
+            removeFromAvailable(8);
+            button8.Enabled = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -257,11 +267,61 @@ namespace N_and_C
             button9.Text = "X";
             buttonNine = 1;
             addPressedButton();
+            removeFromAvailable(9);
+            computerMove();
+            button9.Enabled = false;
+        }
+
+        private void computerMove()
+        {
+            var random = new Random();
+            //compGo =
+            var count = availableMoves.Count();
+            int index = random.Next(count);
+            textBox1.Text = availableMoves[index].ToString();
+        }
+
+        private void resetAvailable()
+        {
+            availableMoves = availableMovesSpare;
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            resetGame();
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
+            button6.Enabled = true;
+            button7.Enabled = true;
+            button8.Enabled = true;
+            button9.Enabled = true;
+
+            buttonOne = 0;
+            buttonTwo = 0;
+            buttonThree = 0;
+            buttonFour = 0;
+            buttonFive = 0;
+            buttonSix = 0;
+            buttonSeven = 0;
+            buttonEight = 0;
+            buttonNine = 0;
+
+            button1.Text = "";
+            button2.Text = "";
+            button3.Text = "";
+            button4.Text = "";
+            button5.Text = "";
+            button6.Text = "";
+            button7.Text = "";
+            button8.Text = "";
+            button9.Text = "";
+
+            resetLists();
+            SetWinningRows();
+            textBox1.Text = "";
+            resetAvailable();
         }
     }
 }
