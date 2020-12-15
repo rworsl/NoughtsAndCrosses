@@ -89,6 +89,12 @@ namespace N_and_C
             availableMoves = availableMoves.Where(val => val != num).ToArray();
         }
 
+        private void playerMove(int num)
+        {
+            addPressedButton();
+            removeFromAvailable(num);
+        }
+
         private string checkWin()
         {
             if ((winningRow1[0] == 1) && (winningRow1[1] == 1) && (winningRow1[2] == 1))
@@ -123,35 +129,35 @@ namespace N_and_C
             {
                 return "Player 1 Wins";
             }
-            else if ((winningRow1[0] == 2) && (winningRow1[1] == 2) && (winningRow1[1] == 2))
+            else if ((winningRow1[0] == 2) && (winningRow1[1] == 2) && (winningRow1[2] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow2[0] == 2) && (winningRow2[1] == 2) && (winningRow2[1] == 2))
+            else if ((winningRow2[0] == 2) && (winningRow2[1] == 2) && (winningRow2[2] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow3[0] == 2) && (winningRow3[1] == 2) && (winningRow3[1] == 2))
+            else if ((winningRow3[0] == 2) && (winningRow3[1] == 2) && (winningRow3[2] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow4[0] == 2) && (winningRow4[1] == 2) && (winningRow4[1] == 2))
+            else if ((winningRow4[0] == 2) && (winningRow4[1] == 2) && (winningRow4[2] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow5[0] == 2) && (winningRow5[1] == 2) && (winningRow5[1] == 2))
+            else if ((winningRow5[0] == 2) && (winningRow5[1] == 2) && (winningRow5[2] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow6[0] == 2) && (winningRow6[1] == 2) && (winningRow6[1] == 2))
+            else if ((winningRow6[0] == 2) && (winningRow6[1] == 2) && (winningRow6[2] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow7[0] == 2) && (winningRow7[1] == 2) && (winningRow7[1] == 2))
+            else if ((winningRow7[0] == 2) && (winningRow7[1] == 2) && (winningRow7[2] == 2))
             {
                 return "Computer Wins";
             }
-            else if ((winningRow8[0] == 2) && (winningRow8[1] == 2) && (winningRow8[1] == 2))
+            else if ((winningRow8[0] == 2) && (winningRow8[1] == 2) && (winningRow8[2] == 2))
             {
                 return "Computer Wins";
             }
@@ -193,17 +199,17 @@ namespace N_and_C
         {
             button1.Text = "X";
             buttonOne = 1;
-            addPressedButton();
-            removeFromAvailable(1);
+            playerMove(1);
             button1.Enabled = false;
+            easyComputerMove();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             button2.Text = "X";
             buttonTwo = 1;
-            addPressedButton();
-            removeFromAvailable(2);
+            playerMove(2);
+            easyComputerMove();
             button2.Enabled = false;
         }
 
@@ -211,8 +217,8 @@ namespace N_and_C
         {
             button3.Text = "X";
             buttonThree = 1;
-            addPressedButton();
-            removeFromAvailable(3);
+            playerMove(3);
+            easyComputerMove();
             button3.Enabled = false;
         }
 
@@ -220,8 +226,8 @@ namespace N_and_C
         {
             button4.Text = "X";
             buttonFour = 1;
-            addPressedButton();
-            removeFromAvailable(4);
+            playerMove(4);
+            easyComputerMove();
             button4.Enabled = false;
         }
 
@@ -229,8 +235,8 @@ namespace N_and_C
         {
             button5.Text = "X";
             buttonFive = 1;
-            addPressedButton();
-            removeFromAvailable(5);
+            playerMove(5);
+            easyComputerMove();
             button5.Enabled = false;
         }
 
@@ -238,8 +244,8 @@ namespace N_and_C
         {
             button6.Text = "X";
             buttonSix = 1;
-            addPressedButton();
-            removeFromAvailable(6);
+            playerMove(6);
+            easyComputerMove();
             button6.Enabled = false;
         }
 
@@ -247,8 +253,8 @@ namespace N_and_C
         {
             button7.Text = "X";
             buttonSeven = 1;
-            addPressedButton();
-            removeFromAvailable(7);
+            playerMove(7);
+            easyComputerMove();
             button7.Enabled = false;
             
         }
@@ -257,8 +263,8 @@ namespace N_and_C
         {
             button8.Text = "X";
             buttonEight = 1;
-            addPressedButton();
-            removeFromAvailable(8);
+            playerMove(8);
+            easyComputerMove();
             button8.Enabled = false;
         }
 
@@ -266,19 +272,103 @@ namespace N_and_C
         {
             button9.Text = "X";
             buttonNine = 1;
-            addPressedButton();
-            removeFromAvailable(9);
-            computerMove();
+            playerMove(9);
+            easyComputerMove();
             button9.Enabled = false;
         }
 
-        private void computerMove()
+        private void easyComputerMove()
+        {
+            var pickedNum = pickRandom();
+            makeMove(pickedNum);
+
+        }
+
+        private void makeMove(int num)
+        {
+            //System.Threading.Thread.Sleep(1000);
+            if (num.Equals(1))
+            {
+                button1.Text = "O";
+                buttonOne = 2;
+                addPressedButton();
+                removeFromAvailable(1);
+                button1.Enabled = false;
+            }
+            else if (num.Equals(2))
+            {
+                button2.Text = "O";
+                buttonTwo = 2;
+                addPressedButton();
+                removeFromAvailable(2);
+                button2.Enabled = false;
+            }
+            else if (num.Equals(3))
+            {
+                button3.Text = "O";
+                buttonThree = 2;
+                addPressedButton();
+                removeFromAvailable(3);
+                button3.Enabled = false;
+            }
+            else if (num.Equals(4))
+            {
+                button4.Text = "O";
+                buttonFour = 2;
+                addPressedButton();
+                removeFromAvailable(4);
+                button4.Enabled = false;
+            }
+            else if (num.Equals(5))
+            {
+                button5.Text = "O";
+                buttonFive = 2;
+                addPressedButton();
+                removeFromAvailable(5);
+                button5.Enabled = false;
+            }
+            else if (num.Equals(6))
+            {
+                button6.Text = "O";
+                buttonSix = 2;
+                addPressedButton();
+                removeFromAvailable(6);
+                button6.Enabled = false;
+            }
+            else if (num.Equals(7))
+            {
+                button7.Text = "O";
+                buttonSeven = 2;
+                addPressedButton();
+                removeFromAvailable(7);
+                button7.Enabled = false;
+            }
+            else if (num.Equals(8))
+            {
+                button8.Text = "O";
+                buttonEight = 2;
+                addPressedButton();
+                removeFromAvailable(8);
+                button8.Enabled = false;
+            }
+            else if (num.Equals(9))
+            {
+                button9.Text = "O";
+                buttonNine = 2;
+                addPressedButton();
+                removeFromAvailable(9);
+                button9.Enabled = false;
+            }
+            else{}
+        }
+
+        private int pickRandom()
         {
             var random = new Random();
             //compGo =
             var count = availableMoves.Count();
             int index = random.Next(count);
-            textBox1.Text = availableMoves[index].ToString();
+            return index;
         }
 
         private void resetAvailable()
