@@ -201,7 +201,22 @@ namespace N_and_C
             buttonOne = 1;
             playerMove(1);
             button1.Enabled = false;
-            easyComputerMove();
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -209,8 +224,23 @@ namespace N_and_C
             button2.Text = "X";
             buttonTwo = 1;
             playerMove(2);
-            easyComputerMove();
             button2.Enabled = false;
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -218,8 +248,23 @@ namespace N_and_C
             button3.Text = "X";
             buttonThree = 1;
             playerMove(3);
-            easyComputerMove();
             button3.Enabled = false;
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -227,8 +272,23 @@ namespace N_and_C
             button4.Text = "X";
             buttonFour = 1;
             playerMove(4);
-            easyComputerMove();
             button4.Enabled = false;
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -236,8 +296,23 @@ namespace N_and_C
             button5.Text = "X";
             buttonFive = 1;
             playerMove(5);
-            easyComputerMove();
             button5.Enabled = false;
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -245,8 +320,23 @@ namespace N_and_C
             button6.Text = "X";
             buttonSix = 1;
             playerMove(6);
-            easyComputerMove();
             button6.Enabled = false;
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -254,9 +344,24 @@ namespace N_and_C
             button7.Text = "X";
             buttonSeven = 1;
             playerMove(7);
-            easyComputerMove();
             button7.Enabled = false;
-            
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -264,8 +369,23 @@ namespace N_and_C
             button8.Text = "X";
             buttonEight = 1;
             playerMove(8);
-            easyComputerMove();
             button8.Enabled = false;
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -273,20 +393,33 @@ namespace N_and_C
             button9.Text = "X";
             buttonNine = 1;
             playerMove(9);
-            easyComputerMove();
             button9.Enabled = false;
+            if ((availableMoves.Count().Equals(0)) && ((textBox1.Text == "Player 1 Wins")))
+            {
+                textBox1.Text = "Player 1 Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == "Computer Wins"))
+            {
+                textBox1.Text = "Computer Wins";
+            }
+            else if (availableMoves.Count().Equals(0) && (textBox1.Text == ""))
+            {
+                textBox1.Text = "Draw";
+            }
+            else
+            {
+                easyComputerMove();
+            }
         }
 
-        private void easyComputerMove()
+            private void easyComputerMove()
         {
             var pickedNum = pickRandom();
             makeMove(pickedNum);
-
         }
 
         private void makeMove(int num)
         {
-            //System.Threading.Thread.Sleep(1000);
             if (num.Equals(1))
             {
                 button1.Text = "O";
@@ -365,10 +498,10 @@ namespace N_and_C
         private int pickRandom()
         {
             var random = new Random();
-            //compGo =
             var count = availableMoves.Count();
             int index = random.Next(count);
-            return index;
+            var movenum = availableMoves[index]; 
+            return movenum;
         }
 
         private void resetAvailable()
@@ -376,7 +509,7 @@ namespace N_and_C
             availableMoves = availableMovesSpare;
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void fullReset()
         {
             button1.Enabled = true;
             button2.Enabled = true;
@@ -412,6 +545,11 @@ namespace N_and_C
             SetWinningRows();
             textBox1.Text = "";
             resetAvailable();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            fullReset();
         }
     }
 }
